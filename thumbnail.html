@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE GALLERY</title>
+    <link rel="stylesheet" href="thumbnail.css">
+</head>
+<body>
+    <h1>movies</h1>
+    <div class="image-gallery">
+        <img src="large-movie1.jpg" alt="image" class="mainimg">
+        <div class="imgcontainer"> 
+            <img src="large-movie2.jpg" alt="image2" class="thumbnail">
+            <img src="large-movie3.jpg" alt="image3" class="thumbnail">
+            <img src="large-movie4.jpg" alt="image4" class="thumbnail">
+            <img src="large-movie5.jpg" alt="image5" class="thumbnail">
+            <img src="large-movie6.jpg" alt="image6" class="thumbnail">
+
+      </div>
+    </div>
+    <script>
+        var thumbnails=document.querySelectorAll(".thumbnail")
+        var mainimg=document.querySelector(".mainimg")
+
+        for(var i=0;i<thumbnails.length;i++)
+        {
+            thumbnails[i].addEventListener("click",function(){
+                mainimg.src=this.src
+            })
+        }
+    </script>
+    
+</body>
+</html>
